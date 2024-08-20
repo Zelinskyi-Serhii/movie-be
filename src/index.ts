@@ -7,10 +7,11 @@ import { fileUploadRoute } from "./routes/fileUpload.route";
 
 const app = express();
 const PORT = process.env.PORT || 3333;
+const FE_URL = process.env.FE_URL || "";
 
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: [FE_URL],
     credentials: true,
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   }),
